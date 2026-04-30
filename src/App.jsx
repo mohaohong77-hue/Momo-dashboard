@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, CreditCard, CircleCheck, Circle, Plus, Trash2, Code2 } from 'lucide-react';
+import { Calendar, Clock, CreditCard, CheckCircle2, Circle, Plus, Trash2, Code2 } from 'lucide-react';
 
 // --- 基础组件：拖拽卡片容器 ---
 const Card = ({ children, className = "" }) => (
@@ -163,7 +163,7 @@ const UrgentDDL = () => {
                   </div>
                 </div>
                 <button onClick={() => removeTask(task.id)} className="opacity-0 group-hover:opacity-100 text-white/30 hover:text-emerald-400 transition-all">
-                  <CircleCheck size={18} />
+                  <CircleCheck2 size={18} />
                 </button>
               </div>
             );
@@ -238,7 +238,7 @@ const DevBoard = () => {
           {tasks.map(task => (
             <div key={task.id} className="group flex items-start gap-3 p-3 rounded-2xl hover:bg-white/5 transition-all border border-transparent hover:border-white/5">
               <button onClick={() => toggleTask(task.id)} className="mt-0.5 text-white/30 hover:text-white transition-colors shrink-0">
-                {task.done ? <CircleCheck size={18} className="text-emerald-400/80" /> : <Circle size={18} />}
+                {task.done ? <CircleCheck2 size={18} className="text-emerald-400/80" /> : <Circle size={18} />}
               </button>
               <span className={`flex-1 text-sm font-light leading-snug transition-all ${task.done ? 'line-through opacity-30' : 'opacity-90'}`}>
                 {task.text}
