@@ -21,7 +21,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.momo.dashboard",
+      "identifier": "com.momo.dashboard"
     },
     "security": {
       "csp": null
